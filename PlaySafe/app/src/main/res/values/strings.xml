@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Play Safe</string>
+
+    <string name="facebook_app_id">1918365241796645</string>
+    <string name="fb_login_protocol_scheme">fb1918365241796645</string>
+
+    <string name="welcome">you are welcome</string>
+    <string name="cancel_login">The operation was canceled</string>
+    <string name="error_login">An error occurred when entering</string>
+    <string name="logout">Log Out</string>
+    <string name="firebase_error_login">Error logging in to Firebase</string>
+</resources>

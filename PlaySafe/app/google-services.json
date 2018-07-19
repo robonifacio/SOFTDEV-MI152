@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "4333191099",
+    "firebase_url": "https://playsafe-4e573.firebaseio.com",
+    "project_id": "playsafe-4e573",
+    "storage_bucket": "playsafe-4e573.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4333191099:android:a85069ef9e5aaa4e",
+        "android_client_info": {
+          "package_name": "apc.edu.ph.playsafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4333191099-p5gpal915n7qqsf4q2bo38fuqt91dr4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "apc.edu.ph.playsafe",
+            "certificate_hash": "007a69e370dba5a846f9d440762ce95489487f2d"
+          }
+        },
+        {
+          "client_id": "4333191099-8352ipm0r5f1g351i9211g4cerfc9n1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf94wONKwIru1KUf8yy9I5HDMC52pyeI4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4333191099-8352ipm0r5f1g351i9211g4cerfc9n1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
