@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import java.util.Arrays;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginButton loginButton;
+    private Button fb;
     private CallbackManager callbackManager;
 
     private FirebaseAuth firebaseAuth;
@@ -43,9 +45,12 @@ public class LoginActivity extends AppCompatActivity {
 
         callbackManager = CallbackManager.Factory.create();
 
-        loginButton = (LoginButton) findViewById(R.id.loginButton);
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+
 
         loginButton.setReadPermissions(Arrays.asList("email"));
+
+        fb = (Button)findViewById(R.id.fb);
 
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
@@ -116,5 +121,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         firebaseAuth.removeAuthStateListener(firebaseAuthListener);
+    }
+
+    public void onClickFacebookButton(View view) {
+        if (view == fb) {
+            loginButton.performClick();
+        }
     }
 }

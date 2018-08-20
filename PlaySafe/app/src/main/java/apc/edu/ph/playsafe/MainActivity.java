@@ -1,21 +1,30 @@
 package apc.edu.ph.playsafe;
 
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.facebook.Profile;
+import com.facebook.internal.ImageRequest;
 import com.facebook.login.LoginManager;
+import com.facebook.login.widget.ProfilePictureView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView nameTextView;
     private TextView emailTextView;
     private TextView uidTextView;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         nameTextView = (TextView) findViewById(R.id.nameTextView);
+        imageView = (ImageView) findViewById(R.id.fbimage);
         emailTextView = (TextView) findViewById(R.id.emailTextView);
         uidTextView = (TextView) findViewById(R.id.uidTextView);
 
@@ -31,12 +41,16 @@ public class MainActivity extends AppCompatActivity {
         if (user != null) {
             String name = user.getDisplayName();
             String email = user.getEmail();
-            Uri photoUrl = user.getPhotoUrl();
+            String image_url = "http://graph.facebook.com/" + Profile.getCurrentProfile().getId() + "/picture?type=large";
             String uid = user.getUid();
 
+
             nameTextView.setText(name);
-            emailTextView.setText(email);
-            uidTextView.setText(uid);
+            emailTextView.setText("Welcome to Play Safe");
+            Glide.with(this)
+                    .load(image_url)
+                    .into(imageView);
+            uidTextView.setText("");
         } else {
             goLoginScreen();
         }
