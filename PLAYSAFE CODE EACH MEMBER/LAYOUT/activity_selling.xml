@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".SellingActivity">
+
+    <TextView
+        android:id="@+id/CatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="CATEGORY NAME"
+        android:textColor="@color/title"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="36dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/search_field"
+        android:layout_width="247dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_outline"
+        android:hint="Search Buyer's name"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/title"
+        android:textColorHint="@color/title"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/result_list"
+        android:layout_width="368dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_field" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="162dp" />
+
+    <EditText
+        android:id="@+id/wb"
+        android:layout_width="356dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="What are you selling?"
+        android:textColor="@color/title"
+        android:textColorHint="@color/title"
+        android:textColorLink="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="for ₱"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wb" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="171dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginTop="24dp"
+        android:hint="1000"
+        android:inputType="number"
+        android:textColor="@color/title"
+        android:textColorHint="@color/title"
+        android:textColorLink="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wb" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="285dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="368dp"
+        android:layout_height="141dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="351dp"
+                android:layout_height="63dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/title"
+                android:textColorHint="@color/title"
+                android:textColorLink="@android:color/holo_blue_dark"
+                android:hint="Description" />
+
+            <TextView
+                android:id="@+id/wwptps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who will pay the PlaySafe Fee?"
+                android:textColor="@color/textc"
+                app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RadioGroup
+                android:id="@+id/playfeegroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/byer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="playfee"
+                    android:text="Buyer"
+                    android:textColor="@color/title"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="217dp" />
+
+                <RadioButton
+                    android:id="@+id/sller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seller"
+                    android:textColor="@color/title"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    app:layout_constraintEnd_toStartOf="@+id/radioButton2"
+                    app:layout_constraintStart_toEndOf="@+id/radioButton"
+                    tools:layout_editor_absoluteY="217dp" />
+
+                <RadioButton
+                    android:id="@+id/bysl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="50% Buyer / 50% Seller"
+                    android:textColor="@color/title"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    tools:layout_editor_absoluteX="189dp"
+                    tools:layout_editor_absoluteY="217dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipment Method"
+                android:textColor="@color/textc"
+                app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RadioGroup
+                android:id="@+id/shippinggroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/standards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="shippingpay"
+                    android:textColor="@color/title"
+                    android:text="Standard Shipping"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="217dp" />
+
+                <RadioButton
+                    android:id="@+id/cargos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cargo Shipping"
+                    android:textColor="@color/title"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    tools:layout_editor_absoluteY="217dp" />
+
+                <RadioButton
+                    android:id="@+id/noship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No Shipping Needed"
+                    android:textColor="@color/title"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    tools:layout_editor_absoluteY="217dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/wwpfs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who will pay for the shipping?"
+                android:textColor="@color/textc"
+                app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RadioGroup
+                android:id="@+id/wpaygroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/buys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:textColor="@color/title"
+                    android:onClick="whowillpayshipping"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    android:text="Buyer"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="217dp" />
+
+                <RadioButton
+                    android:id="@+id/sells"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seller"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    android:textColor="@color/title"
+                    app:layout_constraintEnd_toStartOf="@+id/radioButton2"
+                    app:layout_constraintStart_toEndOf="@+id/radioButton"
+                    tools:layout_editor_absoluteY="217dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/scost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipping Cost"
+                android:textColor="@color/textc"
+                app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/sc"
+                android:layout_width="171dp"
+                android:layout_height="41dp"
+                android:inputType="number"
+                android:textColor="@color/title"
+                android:textColorHint="@color/title"
+                android:textColorLink="@android:color/holo_blue_dark"
+                android:hint="₱" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="442dp" />
+
+    <Button
+        android:id="@+id/syt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Start your transaction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+</android.support.constraint.ConstraintLayout>
