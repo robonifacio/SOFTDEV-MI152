@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1c262f</color>
+    <color name="colorPrimaryDark">#1c262f</color>
+    <color name="colorAccent">#FFD740</color>
+    <color name="fbbutton">#2e2d4f</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="textc">#87949d</color>
+    <color name="title">#5f92ad</color>
+    <color name="bg">#252f39</color>
+</resources>
