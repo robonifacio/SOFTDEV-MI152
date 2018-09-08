@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+
+    <!--wew-->
+    <TextView
+        android:id="@+id/tt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title"
+        android:text="@string/transaction"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/buyern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tt"
+        android:textColor="@color/title"
+        android:text="@string/buyer"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/sellern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buyern"
+        android:textColor="@color/title"
+        android:text="@string/seller"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sellern"
+        android:textColor="@color/title"
+        android:text="@string/price"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:text="@string/_200"
+        android:textColor="@color/title"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/btext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_below="@id/tt"
+        android:text="@string/kim_ibarra"
+        android:textColor="@color/title"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/stext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_below="@id/buyern"
+        android:text="@string/parparazzi_o_bonifacio"
+        android:textColor="@color/title"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/ptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_below="@id/sellern"
+        android:text="@string/php_1000"
+        android:textColor="@color/title"
+        android:textSize="12sp" />
+
+
+
+
+    <!-- Rightend Arrow -->
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow"
+        android:contentDescription="@string/todo" />
+
+</RelativeLayout>
